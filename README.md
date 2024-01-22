@@ -16,7 +16,7 @@ mvn spring-boot:run
 ### Запуск с помощью Dockerа
 
 * Скачать / клонировать репозиторий
-* * Собрать проект командой
+* Собрать проект командой
 ```bash
 mvn clean package
 ```
@@ -28,7 +28,7 @@ docker build . -t image_name
 ```bash
 docker run -p 8080:8080 image_name
 ```
-####  Проверка работы
+###  Проверка работы
 
 Swagger UI для проверки работы API будет доступен по ссылке http://localhost:8080/swagger-ui/index.html
 
