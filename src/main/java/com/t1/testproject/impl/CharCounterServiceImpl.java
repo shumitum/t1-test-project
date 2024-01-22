@@ -15,7 +15,7 @@ public class CharCounterServiceImpl implements CharCounterService {
     public Map<Character, Long> getNumberOfOccurrenceChars(String text) {
         Map<Character, Long> charsOccurrence = new HashMap<>();
         Map<Character, Long> occurrenceInReverseOrder = new LinkedHashMap<>();
-        for (char symbol : text.toCharArray()) {
+        for (char symbol: text.toCharArray()) {
             charsOccurrence.computeIfAbsent(symbol, count -> text.chars().filter(ch -> ch == symbol).count());
         }
         charsOccurrence.entrySet().stream()
