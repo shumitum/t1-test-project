@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "90197779-21fc-479e-8337-f96b003b2c17",
+		"name": "t1 test project postman tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25952599"
+	},
+	"item": [
+		{
+			"name": "\"asd\" String no error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Has response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'a' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('a');\r",
+							"    pm.expect(jsonData.a, '\"a\" must be 1').to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test s' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('s');\r",
+							"    pm.expect(jsonData.s, '\"s\" must be 1').to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'd' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('d');\r",
+							"    pm.expect(jsonData.d, '\"d\" must be 1').to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=asd",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "asd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\" asd \" String no error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Has response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'a' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('a');\r",
+							"    pm.expect(jsonData.a, '\"a\" must be 1').to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test s' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('s');\r",
+							"    pm.expect(jsonData.s, '\"s\" must be 1').to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'd' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('d');\r",
+							"    pm.expect(jsonData.d, '\"d\" must be 1').to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text= asd ",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": " asd "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\" asds \" String no error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Has response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'a' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('a');\r",
+							"    pm.expect(jsonData.a, '\"a\" must be 1').to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test s' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('s');\r",
+							"    pm.expect(jsonData.s, '\"s\" must be 2').to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'd' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('d');\r",
+							"    pm.expect(jsonData.d, '\"d\" must be 1').to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text= asds ",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": " asds "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\" asdsaa \" String no error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Has response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'a' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('a');\r",
+							"    pm.expect(jsonData.a, '\"a\" must be 3').to.eql(3);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test s' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('s');\r",
+							"    pm.expect(jsonData.s, '\"s\" must be 2').to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'd' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('d');\r",
+							"    pm.expect(jsonData.d, '\"d\" must be 1').to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text= asdsaa ",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": " asdsaa "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\" asdsaa \" String no error",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Has response\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'a' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('a');\r",
+							"    pm.expect(jsonData.a, '\"a\" must be 3').to.eql(3);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test s' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('s');\r",
+							"    pm.expect(jsonData.s, '\"s\" must be 2').to.eql(2);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Test 'd' field\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('d');\r",
+							"    pm.expect(jsonData.d, '\"d\" must be 4').to.eql(4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text= asdsaaddd ",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": " asdsaaddd "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empty String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"as d\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=as d",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "as d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"ASD\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=as d",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "as d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"Ы\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=Ы",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Ы"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"1\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"ы\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=ы",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "ы"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\")_\" String error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/query?text=)_",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"query"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": ")_"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
