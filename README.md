@@ -1,4 +1,4 @@
-# Test project for T1
+# Test project
 
 ### Запуск приложения
 
